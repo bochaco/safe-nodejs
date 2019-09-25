@@ -7,8 +7,9 @@
   "contributors": "Gabriel Viganotti <gabrielviganotti@gmail.com>",
   "license": "(MIT OR BSD-3-Clause)",
   "scripts": {
+    "install": "neon build --release && rm -rf native/target",
     "bump": "standard-version -a",
-    "postinstall": "node scripts/postinstall.js",
+    "//": "node scripts/postinstall.js",
     "download-node-abi": "node-pre-gyp install --fallback-to-build=false || neon build --release",
     "package": "node-pre-gyp package",
     "package-electron": "yarn node-pre-gyp package --runtime=electron --target=6.0.7 --dist-url=https://electronjs.org/headers",
